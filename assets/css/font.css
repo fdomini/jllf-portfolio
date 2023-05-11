@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins.ttf'), url('./Poppins.ttf') format('truetype');
+    font-style: normal !important;
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: local('Baskerville.ttf'), url('./Baskerville.ttf') format('truetype');
+    font-style: normal !important;
+}
