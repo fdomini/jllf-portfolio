@@ -20,8 +20,7 @@
 
         </main>
     </head>
-    <body>
-
+<body>
 <div class="everything" id="everything">
     <!-- header -->
     <section class="hero-container" id="header">
@@ -34,7 +33,6 @@
                 <a href="#header" id="logo"><img src="assets/svg/logo.svg" class="logo"></a>
             </div>
             <div class="navigation" id="#nav">
-                <div id="marker"></div>
                 <a href="#about">ABOUT</a>
                 <a href="#portfolio">WORKS</a>
                 <a href="#contact">CONTACT</a>
@@ -95,7 +93,7 @@
                     <h2>OGIE'S LAMI</h2>
                     <h6>Logo & Brand Identity Design</h6><br>
                     <p><blockquote>Ogie's Lami is a small canteen hidden within the streets of Binondo.</blockquote></p><br>
-                    <a href="behance.net"><button class="checkBehance">VIEW ON BEHANCE <i class='bx bx-link-external'></i></button></a>
+                    <a href="https://www.behance.net/gallery/163352699/Packaging-Design" target="_blank"><button class="checkBehance">VIEW ON BEHANCE <i class='bx bx-link-external'></i></button></a>
                 </div>
             </div>
 
@@ -105,7 +103,8 @@
                     <h2>SOCIAL MEDIA ADS</h2>
                     <h6>Graphic Design</h6><br>
                     <p style="font-size: 9px"><blockquote>A collection of social media ads designed with the intention of studying brand identities.</blockquote></p><br>
-                    <a href="https://www.behance.net/gallery/162522681/Social-Media-Ad-Study-3"><button class="checkBehance">VIEW ON BEHANCE <i class='bx bx-link-external'></i></button></a>
+                    <a href="https://www.behance.net/gallery/162522681/Social-Media-Ad-Study-3" target="
+                    _blank"><button class="checkBehance">VIEW ON BEHANCE <i class='bx bx-link-external'></i></button></a>
                 </div>
             </div>
 
@@ -115,7 +114,7 @@
                     <h2>ARTWORKS</h2>
                     <h6>Illustrator/Artist</h6><br>
                     <p><blockquote>A collection of some of the artworks that demonstrate my skills as an illustrator. </blockquote></p><br>
-                    <a href="behance.net"><button class="checkBehance">VIEW ON BEHANCE <i class='bx bx-link-external'></i></button></a>
+                    <a href="https://www.behance.net/gallery/162782277/Illustrations" target="_blank"><button class="checkBehance">VIEW ON BEHANCE <i class='bx bx-link-external'></i></button></a>
                 </div>
             </div>
 
@@ -130,17 +129,17 @@
                 <p>I am a self-motivated professional with three years of talent acquisition experience, seeking to start a career in the creative industry as a graphic designer and illustrator. <br><br>If you'd like to work with me, please refer to my contact details below.</p><br><br>
 
                 <div class="contactList">
-                    <a href=""><i class='bx bx-envelope'></i></a>
-                    <a href=""><i class='bx bxl-behance' ></i></a>
-                    <a href=""><button class="downloadCV">Download CV</button></a>
+                    <a href="mailto:johndies028@gmail.com"><i class='bx bx-envelope'></i></a>
+                    <a href="https://www.behance.net/johnluigifontilla" target="_blank"><i class='bx bxl-behance' ></i></a>
+                    <a href="assets/John Luigi L. Fontilla RESUME.pdf" download><button class="downloadCV">Download CV</button></a>
                 </div>
             </div>
 
             <div class="form">
-                <form action="">
-                    <input type="name" placeholder="Your Name or Company Name" required>
-                    <input type="email" placeholder="Your Email Address" required>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="How can I help you?" required></textarea>
+                <form onsubmit="sendEmail();">
+                    <input type="name" id="name" placeholder="Your Name or Company Name" required>
+                    <input type="email" id="email" placeholder="Your Email Address" required>
+                    <textarea  id="message" cols="30" rows="10" placeholder="How can I help you?" required></textarea>
                     <input type="submit" value="Send Message" class="submit" required>
                 </form>
             </div>
@@ -150,9 +149,16 @@
 
 </div>
     <!-- javascript -->
-    <script src="assets/js/index.js"></script>
-    <script>
-        
+    <script src="assets/js/smtp.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
-    </body>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("2uBcSvnAcQnHkZksV");
+        })();
+</script>
+
+</body>
 </html>

@@ -134,7 +134,7 @@ body {
 }
 
 :focus-visible { outline-offset: 4px;}
-/*
+
 ::-webkit-scrollbar { width: 1px; }
 ::-webkit-scrollbar-track { background-color: var(--black); }
 ::-webkit-scrollbar-thumb { background-color: var(--black);}
@@ -186,38 +186,16 @@ body {
     -o-transition: color 0.4s ease-in-out;
 }
 
+.logo {
+    width: 2.4em;
+    display: inline-flex;
+    float: inline-start;
+}
 
+.navigation {
+    display: inline-flex;
+    float: inline-end;
 
-    .logo {
-        width: 2.4em;
-        display: inline-flex;
-        float: inline-start;
-    }
-
-    .navigation {
-        display: inline-flex;
-        float: inline-end;
-
-    }
-
-    div #marker {
-        position: absolute;
-        height: 4px;
-        width: 20em;
-        background-color: var(--red);
-        bottom: 0px;
-
-        transition: 0.5s;
-        -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
-        -ms-transition: 0.5s;
-        -o-transition: 0.5s;
-
-        transform: skew(-25deg);
-        -webkit-transform: skew(-25deg);
-        -moz-transform: skew(-25deg);
-        -ms-transform: skew(-25deg);
-        -o-transform: skew(-25deg);
 }
 
 /*-- HERO -- */
@@ -480,12 +458,11 @@ body {
     justify-self: end;
     font-family: var(--ff-poppins);
     z-index: -1;
-
 }
 
 .form form input, form textarea {
     font-family: var(--ff-poppins);
-    width: 40%;
+    width: 45%;
     padding: 14px;
     background: var(--black);
     color: var(--white);
