@@ -1,3 +1,13 @@
+
+function colorChange(){
+    document.getElementById("about").onscroll = function(){
+        var nav = document.getElementsByClassName("navigation");
+
+        nav.style.color= "black";
+    }
+}
+
+
 function sendEmail(){
     var params = {
         name : document.getElementById('name').value,
@@ -24,3 +34,4 @@ emailjs.send(serviceID, templateID, params)
 .catch((err) => console.log(err));
 
 }
+
