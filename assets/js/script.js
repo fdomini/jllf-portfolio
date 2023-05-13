@@ -1,11 +1,30 @@
+const aboutSection = document.querySelector("#about");
+const headerSection = document.querySelector("#header");
+const portfolioSection = document.querySelector("#portfolio");
+const contactSection = document.querySelector("#contact");
+const links = document.querySelectorAll("navigation a");
 
-function colorChange(){
-    document.getElementById("about").onscroll = function(){
-        var nav = document.getElementsByClassName("navigation");
+window.addEventListener("scroll", () => {
+  if (isInViewport(aboutSection)) {
+    links.forEach(link => link.style.color = "red");
+  } else if (!isInViewport(aboutSection) && !isInViewport(headerSection) &&
+    !isInViewport(portfolioSection) && !isInViewport(contactSection)) {
+    return;
+  } else {
+    links.forEach(link => link.style.color = "black");
+  }
+});
 
-        nav.style.color= "black";
-    }
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.left >= 0 &&
+    rect.top >= 0 &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
 }
+
 
 
 function sendEmail(){
